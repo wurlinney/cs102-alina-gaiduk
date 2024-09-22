@@ -1,4 +1,4 @@
-
+import os
 from  src.lab4.task_one.cinema import Recommendation
 import unittest
 
