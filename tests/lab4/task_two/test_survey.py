@@ -33,7 +33,8 @@ class TestMakeGroups(unittest.TestCase):
     def test_read_personal_data(self):
         borders = [18, 25, 35, 45, 60, 80, 100]
         age_group = MakeGroups(borders)
-        file_path = 'personal_data.txt'
+        current_dir = os.path.dirname(__file__)
+        file_path = os.path.join(current_dir, 'personal_data.txt')
         age_group.read_personal_data(file_path)
         expected_group_info = [
             "101+: Кошельков Захар Брониславович (105)",
