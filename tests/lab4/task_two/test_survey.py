@@ -1,4 +1,5 @@
 import unittest
+import os
 from src.lab4.task_two.survey import Respondent, Group, MakeGroups
 
 class TestRespondent(unittest.TestCase):
