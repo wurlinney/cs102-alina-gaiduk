@@ -6,8 +6,9 @@ import unittest
 class TestRecommended(unittest.TestCase):
 
     def test_recommend(self):
-        list_of_films = "films.txt"
-        history_file = "history.txt"
+        current_dir = os.path.dirname(__file__)
+        list_of_films = os.path.join(current_dir, 'films.txt')
+        history_file = os.path.join(current_dir, 'history.txt')
         recommendation_system = Recommendation(list_of_films, history_file)
         input_data = [2, 4]
         expected_result = 'Дюна'
@@ -16,8 +17,9 @@ class TestRecommended(unittest.TestCase):
 
 
     def test_history_list(self):
-        list_of_films = "films.txt"
-        history_file = "history.txt"
+        current_dir = os.path.dirname(__file__)
+        list_of_films = os.path.join(current_dir, 'films.txt')
+        history_file = os.path.join(current_dir, 'history.txt')
         recommendation_service = Recommendation(list_of_films, history_file)
         expected_history_sets = [
             {2, 1, 3},
