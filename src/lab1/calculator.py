@@ -1,9 +1,7 @@
-a = float(input("Введите первое число: "))
-b = float(input("Введите второе число: "))
-sign = input("Введите один из знаков +-*/: ")
-
 
 def calc(num1, operator, num2):
+    num1 = float(num1)
+    num2 = float(num2)
     try:
         if operator == "+":
             return f"{num1} + {num2} = {num1 + num2}"
@@ -16,6 +14,9 @@ def calc(num1, operator, num2):
         raise ValueError("Введены некорректные данные.")
     except ZeroDivisionError:
         return "На ноль делить нельзя."
-
-
-print(calc(a, sign, b))
+if __name__ == '__main__':
+    while True:
+        a = input('Введите первое число: ')
+        sign = input("Введите оператор: ")
+        b = input("Введите второе число: ")
+        print(calc(a,sign,b))
